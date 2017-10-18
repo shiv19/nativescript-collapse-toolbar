@@ -1,13 +1,17 @@
 {
     "name": "nativescript-collapse-toolbar",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
+    "description": "Nativescript plugin to use Collapsing Toolbar layout for Android Apps",
     "main": "collapse-toolbar",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
-            "android": "3.0.0",
-            "ios": "3.0.0"
+            "android": "3.0.0"
+        },
+        "plugin": {
+            "nan": "true",
+            "core3": "true",
+            "category": "Interface"
         }
     },
     "scripts": {
@@ -33,8 +37,13 @@
         "iOS"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "MultiShiv19",
+        "email": "contact@shivaprasad.me",
+        "url": "https://github.com/shiv19"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shiv19/nativescript-collapse-toolbar.git"
     },
     "bugs": {
         "url": "https://github.com/shiv19/nativescript-collapse-toolbar/issues"
