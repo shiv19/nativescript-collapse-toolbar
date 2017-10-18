@@ -1,26 +1,18 @@
-# Your Plugin Name
+# NativeScript Collapsing Toolbar
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
-
-Then describe what's the purpose of your plugin. 
-
-In case you develop UI plugin, this is where you can add some screenshots.
-
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+The purpose of this plugin is to create a Collapsing Toolbar Layout for Android, using Android Coordinator Layout 
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
+Plugin is not published yet
 
 ```javascript
-tns plugin add <your-plugin-name>
+tns plugin add nativescript-collapse-toolbar
 ```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
+coming soon!
 	
 	```javascript
     Usage code snippets here
@@ -28,12 +20,7 @@ Describe any usage specifics for your plugin. Give examples for Android, iOS, An
 
 ## API
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
+coming soon!
     
 ## License
 
