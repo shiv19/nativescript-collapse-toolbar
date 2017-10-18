@@ -13,10 +13,6 @@ tns plugin add nativescript-collapse-toolbar
 ## Usage 
 
 coming soon!
-	
-	```javascript
-    Usage code snippets here
-    ```)
 
 ## API
 
