@@ -4,6 +4,7 @@ import {
     backgroundInternalProperty
 } from "./collapse-toolbar.common";
 import * as app from "tns-core-modules/application";
+import { fromResource } from "tns-core-modules/image-source";
 
 declare var android: any;
 declare var R: any;
@@ -36,15 +37,28 @@ export class CollapseToolbar extends CollapseToolbarCommon {
 
             const imageView = new android.widget.ImageView(this._context);
 
-            // need a way to set imageView source to @drawable/<imagename>
+            // const drawableId = android.content.res.Resources
+            //     .getSystem()
+            //     .getIdentifier("icon", "drawable", "org.nativescript.demo");
+            // const iconDrawable = android.content.res.Resources
+            //     .getSystem()
+            //     .getDrawable(drawableId);
+            
+            imageView.setImageDrawable(new android.graphics.drawable.BitmapDrawable(fromResource("icon").android));
 
             collapsingToolbar.addView(imageView);
+
+            const imageViewLP = imageView.getLayoutParams();
+            imageViewLP.setCollapseMode(android.support.design.widget.CollapsingToolbarLayout.LayoutParams.COLLAPSE_MODE_PARALLAX);
+            imageViewLP.height = 100;
+            imageView.requestLayout();
 
             const toolbar = new android.support.v7.widget.Toolbar(this._context);           
             collapsingToolbar.addView(toolbar);
             let toolbarLP = toolbar.getLayoutParams();
-            toolbarLP.setCollapseMode(android.support.design.widget.CollapsingToolbarLayout.COLLAPSE_MODE_PIN);
+            toolbarLP.setCollapseMode(android.support.design.widget.CollapsingToolbarLayout.LayoutParams.COLLAPSE_MODE_PIN);
             toolbar.setLayoutParams(toolbarLP);
+            toolbar.requestLayout();
 
         appBarLayout.addView(collapsingToolbar);
         let collapsingToolbarLP = collapsingToolbar.getLayoutParams();
@@ -52,6 +66,7 @@ export class CollapseToolbar extends CollapseToolbarCommon {
         collapsingToolbarLP.setScrollFlags(android.support.design.widget.AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
             || android.support.design.widget.AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED);
         collapsingToolbar.setLayoutParams(collapsingToolbarLP);
+        collapsingToolbar.requestLayout();
         this.nativeView.addView(appBarLayout);
 
         const NScrollView = new android.support.v4.widget.NestedScrollView(this._context);
