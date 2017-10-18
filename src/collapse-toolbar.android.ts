@@ -35,6 +35,9 @@ export class CollapseToolbar extends CollapseToolbarCommon {
         const collapsingToolbar = new android.support.design.widget.CollapsingToolbarLayout(this._context);
 
             const imageView = new android.widget.ImageView(this._context);
+
+            // need a way to set imageView source to @drawable/<imagename>
+
             collapsingToolbar.addView(imageView);
 
             const toolbar = new android.support.v7.widget.Toolbar(this._context);           
